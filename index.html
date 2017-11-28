@@ -17,20 +17,45 @@
 7. If the temperature is greater than 90F/32C the color of the converted temperature should be red.
 8. If the temperature is less than 32F/0C the color of the converted temperature should be blue. 
 9. For any other temperature, the color should be green.-->
-    <div id = "tempForm">
-        <form action="" method="post" id="input">
-            Current Temperature:
-            <input type="text" id="tempInput" name="temp" size="25" maxLength="4">
-            <br><br>
-            <div id = "determineConverter">
-                Convert To:
-                <input type="radio" name="tempType" value="Fahrenheit" checked="checked"> Fahrenheit
-                <input type="radio" name="tempType" value="Celcius"> Celcius
-            </div> 
-            <br><br>
-            <input type="submit" value="Convert Degrees" id="converter"></input type>
-        </form>
+    <div id ="tempForm">
+        <div id="userEntry">    
+            <h1>Temperature Converter</h1>
+                <input id="tempInput" type="text" name="temp" size="25" maxLength="4">
+        </div>
+        <div id ="conversionType">
+            <h3>Convert To:</h3>
+                <input id="tempTypeF" type="radio" name="tempType" value="Fahrenheit"> Fahrenheit
+                <input id="tempTypeC" type="radio" name="tempType" value="Celcius"> Celcius
+        </div> 
+        <div id ="button">
+            <input id="submitValue" type="submit" value="Convert Degrees"></input type>
+        </div>
+        <div id="calculate">
+            <h3>Final Conversion:</h3>
+                <p id="calculation"></p>
+        </div>
     </div>
     <script src="converter.js"></script>
+</body>
+</html>
+
+<!-- </head>
+<body>
+<h1>Converter</h1>
+
+    <input id="input" type="number" name="input">
+    <input id="c" type="radio" name="DEGUnit"> C&deg;
+    <input id="f" type="radio" name="DEGUnit"> F&deg;
+    <button id="clear" >Clear</button>
+    <button id="converter">Convert</button>
+    <div id="output"></div>
+
+
+ -->
+
+
+
+
+<script src="main.js"></script>
 </body>
 </html>
