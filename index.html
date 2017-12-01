@@ -7,32 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-<!-- Write a program that will convert a temperature from fahrenheit to celsius, or from celsius to fahrenheit.
-1. -In the HTML, have one input field where someone can enter in a temperature.
-2. -Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to.
-3. -Create a block level element that will hold the text of the converted temperature.
-4. -Create a button that, when clicked, displays the converted temperature.
-5. -Create another button that, when clicked, clears any text in the input field.
-<!-- 6. Add an event handler to the input field that checks if the user pressed the enter key, and if that happens, perform the conversion. -->
-
-    <div id ="tempForm">
-        <div id="userEntry">    
-            <h1>Temperature Converter</h1>
-                <input id="tempInput" type="text" name="temp" size="25" maxLength="4">
+    <div id="converter">
+        <h4>Enter the temperature you would like to convert:</h4>
+            <input id="tempToConvert" type="text">
+        <br><br>
+            <input id="convertToF" type="radio" value="Fahrenheit" name="tempTypes" checked="checked">Convert to Fahrenheit
+            <input id="convertToC" type="radio" value="Celcius" name="tempTypes">Convert To Celcius
+        <br><br>
+        <div>
+            <h4>Converted Amount:</h4>
+            <p id="convertedAmount"></p>
         </div>
-        <div id ="conversionType">
-            <h3>Convert To:</h3>
-                <input id="tempTypeF" type="radio" name="tempType" value="Fahrenheit" checked="checked"> Fahrenheit
-                <input id="tempTypeC" type="radio" name="tempType" value="Celcius"> Celcius
-        </div> 
-        <div id ="button">
-            <input id="submitValue" type="submit" value="Convert Degrees"></input type>
-            <input id="clearButton" type="submit" value="Clear All"></input type>
-        </div>
-        <div id="calculate">
-            <h3>Final Conversion:</h3>
-                <p id="calculation"></p>
-        </div>
+        <br><br>
+        <button id="convertBtn">Convert</button>
+        <button id="clearBtn">Clear</button>
+    </div>
     </div>
     <script src="converter.js"></script>
 </body>
